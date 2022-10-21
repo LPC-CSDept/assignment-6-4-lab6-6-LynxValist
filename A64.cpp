@@ -44,7 +44,7 @@ void getListprime(int begin, int end)
 			}
 		}
 		if(!tes){
-			cout<<i<<" ";
+			cout<<i<<" is a Prime Number\n";
 		}
 	}
 
