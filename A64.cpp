@@ -12,6 +12,8 @@
 #include <iomanip>
 using namespace std;
 
+void getListprime(int begin = 2, int end = 100);
+
 //----------
 // Make a line for Function Prototype for getListprime Here
 //----------
@@ -25,11 +27,26 @@ int main()
 		getListprime(begin, end);
 	else if (begin > end)
 		getListprime();
-	else
+	else //begin == end
 		getListprime(begin);
 }
 void getListprime(int begin, int end)
 {
+	int i, j, tes;
+	if (begin<=1||end<=1)
+		return;
+	for(i = begin; i < end; i++){
+		tes = 0;
+		for (j=2; j<i; j++){
+			if(i%j == 0){
+				tes = 1;
+				break;
+			}
+		}
+		if(!tes){
+			cout<<i<<" ";
+		}
+	}
 
 	// Complete this function
 }
